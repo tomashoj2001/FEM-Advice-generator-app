@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+:root {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--Dark-Blue);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+}
+
+main {
+  background-color: var(--Dark-Grayish-Blue);
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  border-radius: 1rem;
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+  position: relative;
+  bottom: 2rem;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: var(--Neon-Green);
+}
+
+p {
+  margin: 2rem 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--Light-Cyan);
+}
+
+section > div {
+  background-image: url(images/pattern-divider-mobile.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section > div > img {
+  visibility: hidden;
+}
+
+main > div {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+}
+
+picture {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  background-color: var(--Neon-Green);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+picture:hover {
+  box-shadow: 0 0 2rem .5rem var(--Neon-Green);
+}
+
+picture > img {
+  display: block;
+  padding: 1.2rem;
+}
+
+footer {
+  position: fixed;
+  bottom: .5rem;
+  width: 100%;
+  color: var(--Light-Cyan);
+}
+
+@media screen and (min-width: 500px) {
+  section > div {
+    background-image: url(images/pattern-divider-desktop.svg);
+  }
+}
